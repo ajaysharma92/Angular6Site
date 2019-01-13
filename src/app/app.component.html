@@ -6,15 +6,11 @@
 </div>
 
 <div id="wrapper">
-    <app-header></app-header>
+    <app-navigation></app-navigation>
     <!--Main Content Area-->
     <main id="content">
-        <app-intro></app-intro>
-        <app-gallary></app-gallary>
-        <app-content></app-content>
-        <app-testimonials></app-testimonials>
-        <app-client></app-client>
-        <app-pricingtable></app-pricingtable>
+
+        <router-outlet></router-outlet>
     </main>
     <!--End Main Content Area-->
     <app-footer></app-footer>

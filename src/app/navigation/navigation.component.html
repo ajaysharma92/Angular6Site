@@ -1,27 +1,59 @@
-<!--Main Navigation-->
-<nav id="nav-main">
-    <ul>
-        <li>
-            <a href="#banner">Home</a>
-        </li>
-        <li>
-            <a href="#about">About</a>
-        </li>
-        <li>
-            <a href="#gallery">Gallery</a>
-        </li>
-        <li>
-            <a href="#services">Services</a>
-        </li>
-        <li>
-            <a href="#testimonials">Testimonials</a>
-        </li>
-        <li>
-            <a href="#clients">Clients</a>
-        </li>
-        <li>
-            <a href="#pricing">Pricing</a>
-        </li>
-    </ul>
-</nav>
-<!--End of Main Navigation-->
+<div id="header" class="nav-collapse nav-solid">
+    <div class="row clearfix">
+        <div class="col-1">
+
+            <!--Logo-->
+            <div id="logo">
+
+                <!--Logo that is shown on the banner-->
+                <img src="../assets/images/logo.png" id="banner-logo" alt="Landing Page" />
+                <!--End of Banner Logo-->
+
+                <!--The Logo that is shown on the sticky Navigation Bar-->
+                <img src="../assets/images/logo-2.png" id="navigation-logo" alt="Landing Page" />
+                <!--End of Navigation Logo-->
+
+            </div>
+            <!--End of Logo-->
+
+            <aside>
+
+                <app-social></app-social>
+
+            </aside>
+
+            <!--Main Navigation-->
+            <nav id="nav-main">
+                <ul>
+                    <li>
+                        <a routerLink="/Home" (click)="getActiveTab('Home')" [class.active]="activetab === 'Home'">Home</a>
+                    </li>
+                    <li>
+                        <a routerLink="/About" (click)="getActiveTab('About')" [class.active]="activetab === 'About'">About</a>
+                    </li>
+                    <li>
+                        <a routerLink="/Gallery" (click)="getActiveTab('Gallery')" [class.active]="activetab === 'Gallery'">Gallery</a>
+                    </li>
+                    <li>
+                        <a routerLink="/Services" (click)="getActiveTab('Services')" [class.active]="activetab === 'Services'">Services</a>
+                    </li>
+                    <li>
+                        <a routerLink="/Testimonials" (click)="getActiveTab('Testimonials')" [class.active]="activetab === 'Testimonials'">Testimonials</a>
+                    </li>
+                    <li>
+                        <a routerLink="/Client" (click)="getActiveTab('Client')" [class.active]="activetab === 'Client'">Clients</a>
+                    </li>
+                    <li>
+                        <a routerLink="/Pricing" (click)="getActiveTab('Pricing')" [class.active]="activetab === 'Pricing'">Pricing</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--End of Main Navigation-->
+
+            <div id="nav-trigger"><span></span></div>
+            <nav id="nav-mobile"></nav>
+
+        </div>
+    </div>
+</div>
+<!--End of Header-->
