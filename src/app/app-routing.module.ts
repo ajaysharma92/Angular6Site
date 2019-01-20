@@ -8,6 +8,8 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { ClientComponent } from './client/client.component';
 import { PricingtableComponent } from './pricingtable/pricingtable.component';
 import { HeaderComponent } from './header/header.component';
+import { BlogComponent } from './blog/blog.component';
+import { ArticleComponent } from './article/article.component';
 
 const routes:Routes=[
   {path:'', redirectTo:'/Home',pathMatch:'full'},
@@ -17,7 +19,9 @@ const routes:Routes=[
 {path:'Services',component:ContentComponent},
 {path:'Testimonials',component:TestimonialsComponent},
 {path:'Client',component:ClientComponent},
-{path:'Pricing',component:PricingtableComponent}
+{path:'Pricing',component:PricingtableComponent},
+{path:'Blog',component:BlogComponent},
+{path:'Article/:id',component:ArticleComponent},
 ];
 
 @NgModule({

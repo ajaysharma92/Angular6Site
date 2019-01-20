@@ -7,6 +7,7 @@ import {configuration} from './configuration';
 export class ConfigService {
 config=configuration;
   constructor() { }
+  
   getConfig(){
     return this.config;
   }

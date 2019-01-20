@@ -14,6 +14,9 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { SocialComponent } from './social/social.component';
 import { AppRoutingModule } from './/app-routing.module';
 import {ConfigService} from './config.service';
+import { BlogComponent } from './blog/blog.component';
+import { PostComponent } from './post/post.component';
+import { ArticleComponent } from './article/article.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import {ConfigService} from './config.service';
     FooterComponent,
     HeaderComponent,
     NavigationComponent,
-    SocialComponent
+    SocialComponent,
+    BlogComponent,
+    PostComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
