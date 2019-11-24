@@ -1,0 +1,22 @@
+.container{
+    margin-top: 10%;
+}
+.container .message404 > h1{
+    font-size:10em;
+    padding: 0 10px;
+}
+.message404{
+    position: relative;;
+    display: table;
+    width: 100%;
+    background: #f0f0f0;
+    border-top-width: 1px;
+    border-top-color: #e0e0e0;
+    border-top-style: dashed;
+    border-bottom-width: 1px;
+    border-bottom-color: #e0e0e0;
+    border-bottom-style: dashed;
+}
+.message404>p{
+ text-align: center;
+}

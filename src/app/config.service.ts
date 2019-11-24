@@ -11,4 +11,7 @@ config=configuration;
   getConfig(){
     return this.config;
   }
+  getPostByID(id:number){
+    return this.config.blog.post[id-1];
+  }
 }

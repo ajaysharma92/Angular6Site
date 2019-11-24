@@ -6,9 +6,18 @@
             <h3>{{blog.tagline}}</h3>
             <h2 class="section-title">{{blog.title}}</h2>
         </div>
-
-        <div *ngFor="let mypost of blog.post" class="post-block col-3 wow fadeInUp" data-wow-delay="0.4s">
+        <!--pages or blog.post-->
+        <div *ngFor="let mypost of pages" class="post-block col-3 wow fadeInUp" data-wow-delay="0.4s">
             <app-post [post]="mypost"></app-post>
         </div>
+    </div>
+    <div>
+        <ul *ngIf="pager">
+            <li><a (click)="setPage(1)">First</a></li>
+            <li><a (click)="setPage(pager.currentPage - 1)">Previous</a></li>
+            <li *ngFor="let page of pager.pages"><a (click)="setPage(page)">{{page}}</a></li>
+            <li><a (click)="setPage(pager.currentPage + 1)">Next</a></li>
+            <li><a (click)="setPage(pager.totalPages)">Last</a></li>
+        </ul>
     </div>
 </section>
