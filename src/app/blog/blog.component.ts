@@ -1,6 +1,9 @@
 import { PagerService } from './../pager.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, Injectable } from '@angular/core';
 import { ConfigService } from '../config.service';
+import { ModalComponent } from 'ngb-modal';
+import { ModalComp } from 'src/app/common-modal/common-modal.component';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-blog',
@@ -8,6 +11,7 @@ import { ConfigService } from '../config.service';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
+  @ViewChild(ModalComponent) ModalComponent;
   //public blog={
     //post : []
   //};
@@ -16,17 +20,23 @@ export class BlogComponent implements OnInit {
   pages: any[];
   pageSize = 3;
   pager: any = {};
+  data:string = "This is Blog ModalPopup";
   constructor(private config:ConfigService, private PagerService: PagerService) { }
 
   ngOnInit() {
     this.blog = this.getBlog();
     this.allItems = this.blog.post;
     this.setPage(1);
-    //console.log(this.blog.post)
+
+    this.openModalView();
   }
 
   getBlog(){
     return this.config.getConfig().blog;
+  }
+
+  openModalView(){
+    //return this.myCommonModal.openModal();
   }
 
   setPage(pageNumber: number){

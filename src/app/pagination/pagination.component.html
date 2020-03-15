@@ -1,3 +1,17 @@
-<p>
-  pagination works!
-</p>
+<ul *ngIf="pager" class="pagination">
+  <li [class.disabled] = "pager.currentPage === 1">
+    <a (click)="setCurrentPage(1)"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+  </li>
+  <li [class.disabled] = "pager.currentPage === 1">
+    <a (click)="setCurrentPage(pager.currentPage - 1)"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+  </li>
+  <li *ngFor="let page of pager.pages" [class.active] = "pager.currentPage === page">
+    <a (click)="setCurrentPage(page)">{{page}}</a>
+  </li>
+  <li [class.disabled] = "pager.currentPage === pager.totalPages">
+    <a (click)="setCurrentPage(pager.currentPage + 1)"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  </li>
+  <li [class.disabled] = "pager.currentPage === pager.totalPages">
+    <a (click)="setCurrentPage(pager.totalPages)"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+  </li>
+</ul>

@@ -70,7 +70,11 @@ export const configuration={
             {id:7,title:'The Seven Article.', author:'AJY',image:'gallery-image-7.jpg',publishdate:'2018-01-19T07:22Z', excert:'Cillum magna consequat laboris quis et id. Nulla elit fugiat ad fugiat commodo ex officia Lorem veniam. Esse labore fugiat enim dolor ex voluptate.'},
             {id:8,title:'The Eight Article.', author:'AJY',image:'gallery-image-8.jpg',publishdate:'2018-01-19T07:22Z', excert:'Cillum magna consequat laboris quis et id. Nulla elit fugiat ad fugiat commodo ex officia Lorem veniam. Esse labore fugiat enim dolor ex voluptate.'},
             {id:9,title:'The Nine Article.', author:'AJY',image:'gallery-image-9.jpg',publishdate:'2018-01-19T07:22Z', excert:'Cillum magna consequat laboris quis et id. Nulla elit fugiat ad fugiat commodo ex officia Lorem veniam. Esse labore fugiat enim dolor ex voluptate.'},
-            {id:10,title:'The Ten Article.', author:'AJY',image:'gallery-image-10.jpg',publishdate:'2018-01-19T07:22Z', excert:'Cillum magna consequat laboris quis et id. Nulla elit fugiat ad fugiat commodo ex officia Lorem veniam. Esse labore fugiat enim dolor ex voluptate.'}
+            {id:10,title:'The Ten Article.', author:'AJY',image:'gallery-image-10.jpg',publishdate:'2018-01-19T07:22Z', excert:'Cillum magna consequat laboris quis et id. Nulla elit fugiat ad fugiat commodo ex officia Lorem veniam. Esse labore fugiat enim dolor ex voluptate.'},
+            {id:11,title:'The Eleven Article', author:'AJY',image:'gallery-image-1.jpg',publishdate:'2018-01-19T07:22Z', excert:'Cillum magna consequat laboris quis et id. Nulla elit fugiat ad fugiat commodo ex officia Lorem veniam. Esse labore fugiat enim dolor ex voluptate.'},
+            {id:12,title:'The Twelve Article', author:'AJY',image:'gallery-image-2.jpg',publishdate:'2018-01-19T07:22Z', excert:'Cillum magna consequat laboris quis et id. Nulla elit fugiat ad fugiat commodo ex officia Lorem veniam. Esse labore fugiat enim dolor ex voluptate.'},
+            {id:13,title:'The Thirthen Article', author:'AJY',image:'gallery-image-3.jpg',publishdate:'2018-01-19T07:22Z', excert:'Cillum magna consequat laboris quis et id. Nulla elit fugiat ad fugiat commodo ex officia Lorem veniam. Esse labore fugiat enim dolor ex voluptate.'},
+            {id:14,title:'The Fourtheen Article', author:'AJY',image:'gallery-image-4.jpg',publishdate:'2018-01-19T07:22Z', excert:'Cillum magna consequat laboris quis et id. Nulla elit fugiat ad fugiat commodo ex officia Lorem veniam. Esse labore fugiat enim dolor ex voluptate.'}
         ]
     }
 }

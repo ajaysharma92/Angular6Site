@@ -1,6 +1,6 @@
 <!--Pricing Tables-->
 <section id="blog" class="secondary-color text-center scrollto clearfix ">
-    <div class="row clearfix">
+    <div class="row clearfix pb-0">
 
         <div class="section-heading">
             <h3>{{blog.tagline}}</h3>
@@ -12,12 +12,8 @@
         </div>
     </div>
     <div>
-        <ul *ngIf="pager">
-            <li><a (click)="setPage(1)">First</a></li>
-            <li><a (click)="setPage(pager.currentPage - 1)">Previous</a></li>
-            <li *ngFor="let page of pager.pages"><a (click)="setPage(page)">{{page}}</a></li>
-            <li><a (click)="setPage(pager.currentPage + 1)">Next</a></li>
-            <li><a (click)="setPage(pager.totalPages)">Last</a></li>
-        </ul>
+        <app-pagination [pager]="pager" (setPage)="setPage($event)"></app-pagination>
     </div>
+    <!-- <button (click)="openModal()">Modal Open</button>
+    <app-common-modal [data]="data"></app-common-modal> -->
 </section>

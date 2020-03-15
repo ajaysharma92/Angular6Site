@@ -20,7 +20,9 @@ import { ArticleComponent } from './article/article.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { PagerService } from './pager.service';
-
+import { ModalModule } from 'ngb-modal';
+import { CommonModalComponent, ModalComp } from './common-modal/common-modal.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,11 +41,14 @@ import { PagerService } from './pager.service';
     PostComponent,
     ArticleComponent,
     NotfoundComponent,
-    PaginationComponent
+    PaginationComponent,
+    CommonModalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModalModule,
+    HttpClientModule
   ],
   providers: [ConfigService, PagerService],
   bootstrap: [AppComponent]
