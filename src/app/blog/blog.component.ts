@@ -33,7 +33,7 @@ export class BlogComponent implements OnInit {
   //create a pager using paging service
   this.pager = this.PagerService.getPager(this.allItems.length, pageNumber, this.pageSize);
 
-  //
+  //Current page posts
   this.pages = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
   }
 }
