@@ -1,0 +1,51 @@
+<!--Login-->
+<section id="clients" class="scrollto clearfix">
+  <div class="row clearfix">
+
+      <div class="col-3">
+
+          <div class="section-heading">
+              <h3>Trust is Our's Weapon</h3>
+              <h2 class="section-title"><i class="fa fa-user-plus" aria-hidden="true"></i> SignUp Form</h2>
+              <p class="section-subtitle">Cillum magna consequat laboris quis et id. Nulla elit fugiat ad fugiat commodo ex officia Lorem veniam. Esse labore fugiat enim dolor ex voluptate.</p>
+          </div>
+
+      </div>
+
+      <div class="col-2-3">
+          <!--Login Form-->
+        <section id="pricing" class="secondary-color text-left scrollto clearfix">
+          <form [formGroup]="signupForm" (ngSubmit)="login(signupForm.value)">
+            <div class="row clearfix py-4">
+              <div class="col-2 mx-auto float-none">
+                <label for="fstName"><b>Full Name:</b></label>
+                <div class="clearfix">
+                  <div class="col-2 px-1">
+                    <input type="text" formControlName="fstName" placeholder="Enter Firstname" name="fstName" required>
+                  </div>
+                  <div class="col-2 px-1">
+                    <input type="text" formControlName="lstName" placeholder="Enter Lastname" name="lstName" required>
+                  </div>
+                </div>
+          
+                <label for="email"><b>Email Id:</b></label>
+                <input type="text" formControlName="email" placeholder="Enter Email ID" name="email" required>
+                
+                <label for="psw"><b>Password:</b></label>
+                <input type="password" formControlName="psw" placeholder="Enter Password" name="psw" required>
+                
+                <button type="submit" [class.disabled]="!signupForm.valid">Submit</button>
+                
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-2 mx-auto float-none clearfix">
+                <a routerLink="/login" class="button">Already Have an Account - Login</a>
+              </div>
+                <!--End Login Form-->
+            </div>
+          </form>
+        </section>
+      </div>
+  </div>
+</section>
+<!--End of Login-->

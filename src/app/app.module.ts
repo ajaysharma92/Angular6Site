@@ -23,7 +23,11 @@ import { PagerService } from './pager.service';
 import { ModalModule } from 'ngb-modal';
 import { CommonModalComponent, ModalComp } from './common-modal/common-modal.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { LoginComponent } from './login/login.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { SignupComponent } from './signup/signup.component';
+import { ReactiveFormsModule } from '@angular/forms';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,13 +46,17 @@ import { HttpClientModule } from '@angular/common/http';
     ArticleComponent,
     NotfoundComponent,
     PaginationComponent,
-    CommonModalComponent
+    CommonModalComponent,
+    LoginComponent,
+    ContactusComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ModalModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [ConfigService, PagerService],
   bootstrap: [AppComponent]

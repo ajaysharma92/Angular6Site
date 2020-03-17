@@ -11,6 +11,9 @@ import { PricingtableComponent } from './pricingtable/pricingtable.component';
 import { HeaderComponent } from './header/header.component';
 import { BlogComponent } from './blog/blog.component';
 import { ArticleComponent } from './article/article.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 const routes:Routes=[
   {path:'', redirectTo:'/Home',pathMatch:'full'},
@@ -23,6 +26,9 @@ const routes:Routes=[
 {path:'Pricing',component:PricingtableComponent},
 {path:'Blog',component:BlogComponent},
 {path:'Article/:id',component:ArticleComponent},
+{path:'login',component:LoginComponent},
+{path:'signup',component:SignupComponent},
+{path:'contactus',component:ContactusComponent},
 {path:'404',component:NotfoundComponent},
 {path:'**',redirectTo:'/404'},
 ];
