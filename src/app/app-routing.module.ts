@@ -14,6 +14,7 @@ import { ArticleComponent } from './article/article.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { GaurdService } from './gaurd.service';
 
 const routes:Routes=[
   {path:'', redirectTo:'/Home',pathMatch:'full'},
@@ -24,7 +25,7 @@ const routes:Routes=[
 {path:'Testimonials',component:TestimonialsComponent},
 {path:'Client',component:ClientComponent},
 {path:'Pricing',component:PricingtableComponent},
-{path:'Blog',component:BlogComponent},
+{path:'Blog',component:BlogComponent, canActivate: [GaurdService]},
 {path:'Article/:id',component:ArticleComponent},
 {path:'login',component:LoginComponent},
 {path:'signup',component:SignupComponent},

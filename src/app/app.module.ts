@@ -22,11 +22,13 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { PagerService } from './pager.service';
 import { ModalModule } from 'ngb-modal';
 import { CommonModalComponent, ModalComp } from './common-modal/common-modal.component';
-import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { SignupComponent } from './signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
  
 @NgModule({
   declarations: [
@@ -55,8 +57,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ModalModule,
+    ReactiveFormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false,
+        passThruUnknownUrl: true }
+    )
   ],
   providers: [ConfigService, PagerService],
   bootstrap: [AppComponent]

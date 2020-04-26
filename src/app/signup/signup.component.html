@@ -15,7 +15,7 @@
       <div class="col-2-3">
           <!--Login Form-->
         <section id="pricing" class="secondary-color text-left scrollto clearfix">
-          <form [formGroup]="signupForm" (ngSubmit)="login(signupForm.value)">
+          <form [formGroup]="signupForm" (ngSubmit)="signup(signupForm.value)">
             <div class="row clearfix py-4">
               <div class="col-2 mx-auto float-none">
                 <label for="fstName"><b>Full Name:</b></label>
@@ -31,8 +31,8 @@
                 <label for="email"><b>Email Id:</b></label>
                 <input type="text" formControlName="email" placeholder="Enter Email ID" name="email" required>
                 
-                <label for="psw"><b>Password:</b></label>
-                <input type="password" formControlName="psw" placeholder="Enter Password" name="psw" required>
+                <label for="password"><b>Password:</b></label>
+                <input type="password" formControlName="password" placeholder="Enter Password" name="password" required>
                 
                 <button type="submit" [class.disabled]="!signupForm.valid">Submit</button>
                 

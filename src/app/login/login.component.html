@@ -19,10 +19,10 @@
             <div class="row clearfix py-4">
               <div class="col-2 mx-auto float-none">
                 <label for="email"><b>Email Id:</b></label>
-                <input type="text" formControlName="email" placeholder="Enter Email Id" name="email" required>
+                <input type="text" formControlName="email" placeholder="Enter Email Id" name="email" required autocomplete="true">
           
-                <label for="psw"><b>Password:</b></label>
-                <input type="password" formControlName="psw" placeholder="Enter Password" name="psw" required>
+                <label for="password"><b>Password:</b></label>
+                <input type="password" formControlName="password" placeholder="Enter Password" name="password" required>
                   
                 <button type="submit" [class.disabled]="!loginForm.valid">Login</button>
                 <label>
