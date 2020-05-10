@@ -48,3 +48,8 @@ span.psw {
      width: 100%;
   }
 }
+.disabled, .disabled:hover{
+  background-color: #cccccc;
+  cursor: not-allowed!important;
+  opacity: 1!important;
+}

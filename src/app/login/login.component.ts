@@ -16,8 +16,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.fb.group({
-      'email' : [null, [Validators.email, Validators.required]],
-      'password' : [null, Validators.required]
+      'email' : ["sharmajay121@gmail.com", [Validators.email, Validators.required]],
+      'password' : ["12345", Validators.required]
     });
 
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
@@ -26,11 +26,8 @@ export class LoginComponent implements OnInit {
   login(formData : NgForm){
     return this.auth.login(formData).subscribe(
       (user) => {
-        console.log(user);
-        if(user == false){
-          alert('Fail');
-        }
-        else {
+        if(user){
+          console.log(user);
           this.router.navigate([this.returnUrl]);
         }
       });

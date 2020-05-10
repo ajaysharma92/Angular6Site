@@ -11,7 +11,7 @@ export class InMemoryDataService implements InMemoryDbService {
   constructor(private auth : AuthenticationService) {}
   
   createDb(){
-    const users = [
+    let users = [
       { id: 11, firstName: 'ajay', lastName: 'sharma', email: 'sharmajay121@gmail.com', password: '12345' },
       { id: 12, firstName: 'raj', lastName: 'sha', email: 'rajsha0130@gmail.com', password: '12345' }
     ];
@@ -29,8 +29,8 @@ export class InMemoryDataService implements InMemoryDbService {
         reqInfo.id = null;
         return reqInfo.utils.createResponse$(() => {
           const dataEncapsulation = reqInfo.utils.getConfig().dataEncapsulation;
-          const users = reqInfo.collection.find(users => {
-                  reqInfo.req['body'].email === users.email && reqInfo.req['body'].password === users.password;
+          const users = reqInfo.collection.find(user => {
+                  reqInfo.req['body'].email === user.email && reqInfo.req['body'].password === user.password;
                   
           });
 

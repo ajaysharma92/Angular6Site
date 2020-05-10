@@ -27,8 +27,8 @@ export class AuthenticationService {
   }
 
   signup(formData: NgForm){
-    return this.http.post<any>(`${this.apiurl}/signup`, formData).pipe(
-      tap(user => {
+    return this.http.post<any>(`${this.apiurl}/signup`, formData)
+    .pipe(tap(user => {
         //localStorage.setItem('currentUser', JSON.stringify(user));
         console.log(`added user w/ id=${user.id}`);
       }),
@@ -37,15 +37,12 @@ export class AuthenticationService {
   }
 
   login(formData: NgForm){
-    return this.http.post<any>(`${this.apiurl}/login`, formData).pipe(
-      tap(user => {
-        if(user == {})
-        return false;
-        else
-        return true;
-        //localStorage.setItem('currentUser', JSON.stringify(user));
-        //console.log(`Login with user w/ id=${user.id}`);
-        //console.log(user);        
+    return this.http.post<any>(`${this.apiurl}/login`, formData)
+    .pipe(tap(user => {
+        if(user !== ''){
+          localStorage.setItem('currentUser', JSON.stringify(user));
+          console.log(`Login with user w/ id=${user.id}`);        
+        }
       }),
       catchError(this.handleError('Login', []))
     )
