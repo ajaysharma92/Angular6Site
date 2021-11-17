@@ -29,6 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { ChangeColorDirective } from './change-color.directive';
  
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { InMemoryDataService } from './in-memory-data.service';
     CommonModalComponent,
     LoginComponent,
     ContactusComponent,
-    SignupComponent
+    SignupComponent,
+    ChangeColorDirective
   ],
   imports: [
     BrowserModule,

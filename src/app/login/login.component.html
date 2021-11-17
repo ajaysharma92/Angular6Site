@@ -18,11 +18,15 @@
           <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
             <div class="row clearfix py-4">
               <div class="col-2 mx-auto float-none">
-                <label for="email"><b>Email Id:</b></label>
-                <input type="text" formControlName="email" placeholder="Enter Email Id" name="email" required autocomplete="true">
+                <label for="email"><b>Email Id:</b> 
+                <small appChangeColor ng-show="!loginForm.controls['email'].valid && loginForm.controls['email'].touched" class="ml-2">Invalid Email Address</small>
+                <small *ngIf="!myInput.value && loginForm.controls['email'].touched" class="ml-2 text-error">Email address field requried</small>
+              </label>
+                <input #myInput type="text" formControlName="email" placeholder="Enter Email Id" name="email" required autocomplete="true">
+                
           
                 <label for="password"><b>Password:</b></label>
-                <input type="password" formControlName="password" placeholder="Enter Password" name="password" required>
+                <input #myInput2 type="password" formControlName="password" placeholder="Enter Password" name="password" required>
                   
                 <button type="submit" [ngClass]="{disabled: !loginForm.valid}" [disabled]="!loginForm.valid">Login</button>
                 <label>

@@ -39,7 +39,7 @@ export class AuthenticationService {
   login(formData: NgForm){
     return this.http.post<any>(`${this.apiurl}/login`, formData)
     .pipe(tap(user => {
-        if(user !== ''){
+        if(user && user.token){
           localStorage.setItem('currentUser', JSON.stringify(user));
           console.log(`Login with user w/ id=${user.id}`);        
         }
@@ -47,8 +47,4 @@ export class AuthenticationService {
       catchError(this.handleError('Login', []))
     )
   }
-
-  // Need to start watching from video time url : https://youtu.be/UT2BN-wJD_8?list=PLY7EDLM5qnl47r52Rf3h4AEq9TRooTgo2
-  // time frame need to start from : 1:36:35
-
 }

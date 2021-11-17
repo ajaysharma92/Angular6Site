@@ -12,8 +12,8 @@ export class InMemoryDataService implements InMemoryDbService {
   
   createDb(){
     let users = [
-      { id: 11, firstName: 'ajay', lastName: 'sharma', email: 'sharmajay121@gmail.com', password: '12345' },
-      { id: 12, firstName: 'raj', lastName: 'sha', email: 'rajsha0130@gmail.com', password: '12345' }
+      { id: 1, firstName: 'vijay', lastName: 'kumar', email: 'vijay.kum@gmail.com', password: '12345' },
+      { id: 2, firstName: 'raj', lastName: 'sha', email: 'rajsha0130@gmail.com', password: '12345' }
     ];
     return {users};
   }
@@ -29,10 +29,9 @@ export class InMemoryDataService implements InMemoryDbService {
         reqInfo.id = null;
         return reqInfo.utils.createResponse$(() => {
           const dataEncapsulation = reqInfo.utils.getConfig().dataEncapsulation;
-          const users = reqInfo.collection.find(user => {
-                  reqInfo.req['body'].email === user.email && reqInfo.req['body'].password === user.password;
-                  
-          });
+         //const users = reqInfo.collection.find(user => {  reqInfo.req['body'].email === user.email && reqInfo.req['body'].password === user.password; });
+
+         const users = reqInfo.collection.find( user => user.email === reqInfo.req['body']['email'] && user.password === reqInfo.req['body']['password']);
 
           let responseBody = {};
 
